@@ -83,7 +83,7 @@ async function main() {
 
 function checkOldConfig() {
   let error = false;
-  logger.info(JSON.stringify(env, null, 2))
+  logger.error(JSON.stringify(env, null, 2))
   for (const old of OLD_CONFIG) {
     if (process.env[old] != null) {
       logger.error("Old configuration option present:", old);
