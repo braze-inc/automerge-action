@@ -90,6 +90,7 @@ async function main() {
 
 function checkOldConfig() {
   let error = false;
+  logger.debug(JSON.stringify(env, null, 2));
   for (const old of OLD_CONFIG) {
     if (process.env[old] != null) {
       logger.error("Old configuration option present:", old);
@@ -18064,7 +18065,7 @@ module.exports = eval("require")("encoding");
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse("{\"name\":\"automerge-action\",\"version\":\"0.0.1\",\"description\":\"GitHub action to automatically merge pull requests\",\"main\":\"lib/api.js\",\"author\":\"Pascal\",\"license\":\"MIT\",\"private\":true,\"bin\":{\"automerge-action\":\"./bin/automerge.js\"},\"scripts\":{\"test\":\"jest\",\"it\":\"node it/it.js\",\"lint\":\"prettier -l lib/** test/** && eslint .\",\"compile\":\"ncc build bin/automerge.js --license LICENSE -o dist\",\"prepublish\":\"yarn lint && yarn test && yarn compile\"},\"dependencies\":{\"@octokit/rest\":\"^18.0.6\",\"argparse\":\"^2.0.1\",\"fs-extra\":\"^9.0.1\",\"object-resolve-path\":\"^1.1.1\",\"tmp\":\"^0.2.1\"},\"devDependencies\":{\"@vercel/ncc\":\"^0.26.0\",\"dotenv\":\"^8.2.0\",\"eslint\":\"^7.10.0\",\"eslint-plugin-jest\":\"^24.1.0\",\"jest\":\"^26.5.2\",\"prettier\":\"^2.1.2\"},\"prettier\":{\"trailingComma\":\"none\",\"arrowParens\":\"avoid\"}}");
+module.exports = JSON.parse("{\"name\":\"automerge-action\",\"version\":\"0.13.0\",\"description\":\"GitHub action to automatically merge pull requests\",\"main\":\"lib/api.js\",\"author\":\"Pascal\",\"license\":\"MIT\",\"private\":true,\"bin\":{\"automerge-action\":\"./bin/automerge.js\"},\"scripts\":{\"test\":\"jest\",\"it\":\"node it/it.js\",\"lint\":\"prettier -l lib/** test/** && eslint .\",\"compile\":\"ncc build bin/automerge.js --license LICENSE -o dist\",\"prepublish\":\"yarn lint && yarn test && yarn compile\"},\"dependencies\":{\"@octokit/rest\":\"^18.0.6\",\"argparse\":\"^2.0.1\",\"fs-extra\":\"^9.0.1\",\"object-resolve-path\":\"^1.1.1\",\"tmp\":\"^0.2.1\"},\"devDependencies\":{\"@vercel/ncc\":\"^0.26.0\",\"dotenv\":\"^8.2.0\",\"eslint\":\"^7.10.0\",\"eslint-plugin-jest\":\"^24.1.0\",\"jest\":\"^26.5.2\",\"prettier\":\"^2.1.2\"},\"prettier\":{\"trailingComma\":\"none\",\"arrowParens\":\"avoid\"}}");
 
 /***/ }),
 
