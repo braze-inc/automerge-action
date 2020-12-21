@@ -61,6 +61,11 @@ async function main() {
     logger.level = "debug";
   }
 
+  logger.debug("hi debug");
+  logger.trace("hi trace");
+  logger.info("hi info");
+  logger.error("hi error");
+
   checkOldConfig();
 
   const token = env("GITHUB_TOKEN");
@@ -90,7 +95,7 @@ async function main() {
 
 function checkOldConfig() {
   let error = false;
-  logger.debug(JSON.stringify(process.env, null, 2));
+  logger.error(JSON.stringify(process.env, null, 2));
   for (const old of OLD_CONFIG) {
     if (process.env[old] != null) {
       logger.error("Old configuration option present:", old);
